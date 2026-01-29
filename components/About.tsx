@@ -2,7 +2,8 @@
 import React from 'react';
 
 const About: React.FC = () => {
-  const profileImage = "https://media.licdn.com/dms/image/v2/D4E03AQEHw-9mV7I6ew/profile-displayphoto-scale_400_400/B4EZsx3DunIUAk-/0/1766068079985?e=1767830400&v=beta&t=8GCNUUJPUgt0yBPrRrW4j0u9Iz3eC0ZgCmKFN59dJ6A";
+  // Use the image from public folder
+  const profileImage = `${import.meta.env.BASE_URL}images/foto-pablo.png`;
 
   return (
     <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -39,9 +40,9 @@ const About: React.FC = () => {
       <div className="order-1 md:order-2 flex justify-center">
         <div className="relative">
           <div className="absolute -inset-4 bg-blue-100 rounded-2xl -rotate-6 z-0"></div>
-          <img 
-            src={profileImage} 
-            alt="Pablo Lorenzo Alonso" 
+          <img
+            src={profileImage}
+            alt="Pablo Lorenzo Alonso"
             className="relative z-10 w-full max-w-sm rounded-2xl shadow-2xl border-4 border-white transition-all duration-500"
           />
         </div>
