@@ -13,8 +13,8 @@ const Navbar: React.FC = () => {
           <a href="#resume" className="hover:text-blue-400 transition-colors">CV</a>
           <a href="#articles" className="hover:text-blue-400 transition-colors">Artículos</a>
           <a
-            href={`${import.meta.env.BASE_URL}CV_Pablo_Lorenzo.pdf`}
-            download="CV_Pablo_Lorenzo_Alonso.pdf"
+            href={`${import.meta.env.BASE_URL}CV-PABLO LORENZO ALONSO.pdf`}
+            download="CV-PABLO LORENZO ALONSO.pdf"
             className="bg-blue-600 hover:bg-blue-700 px-4 py-1.5 rounded-full text-xs font-bold transition-all inline-flex items-center"
           >
             <svg className="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
