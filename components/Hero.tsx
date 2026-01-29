@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         <p className="text-xl md:text-2xl text-blue-100 mb-8 font-light max-w-2xl mx-auto">
           Especialista en Negocios Internacionales y Comercio Exterior. Estudiante de Máster en IFFE Business School.
         </p>
-        
+
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <span className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/20 transition-all cursor-default">
             🌍 Comercio Exterior
@@ -32,9 +32,9 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="flex justify-center no-print">
-          <a 
-            href="CV_Pablo_Lorenzo.pdf" 
-            download
+          <a
+            href={`${import.meta.env.BASE_URL}CV-PABLO LORENZO ALONSO.pdf`}
+            download="CV-PABLO LORENZO ALONSO.pdf"
             className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all transform hover:scale-105 active:scale-95 text-lg"
           >
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           </a>
         </div>
       </div>
-      
+
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce no-print">
         <a href="#about" className="text-white/50 hover:text-white">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
