@@ -3,7 +3,7 @@ import React from 'react';
 
 const About: React.FC = () => {
   // Use the image from public folder
-  const profileImage = `${import.meta.env.BASE_URL}images/foto-pablo.png`;
+  const profileImage = `${import.meta.env.BASE_URL}images/foto-pablo.jfif`;
 
   return (
     <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
