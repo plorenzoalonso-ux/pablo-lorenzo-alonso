@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
-  const bgImage = `${import.meta.env.BASE_URL}images/foto-pablo.png`;
+  const bgImage = `${import.meta.env.BASE_URL}images/bg-hero.jpg`;
   const cvFile = `${import.meta.env.BASE_URL}CV-PABLO LORENZO ALONSO.pdf`;
 
   return (
