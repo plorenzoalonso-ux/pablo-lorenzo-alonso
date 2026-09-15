@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
         <p className="text-xl md:text-2xl text-slate-100 mb-8 font-normal max-w-3xl mx-auto leading-relaxed drop-shadow">
           {lang === 'es' 
             ? 'Compras Internacionales | Comercio exterior y Logística | Aprovisionamiento Global'
-            : 'International Purchasing | Foreign Trade & Logistics | Global Sourcing'}
+            : 'International Procurement | Trade & Logistics | Global Sourcing'}
         </p>
         
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
@@ -43,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
             🌍 {lang === 'es' ? 'Comercio Exterior' : 'Foreign Trade'}
           </span>
           <span className="bg-slate-900/80 backdrop-blur-md border border-white/20 text-blue-200 px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-slate-800/90 transition-all cursor-default">
-            💼 {lang === 'es' ? 'Compras Internacionales' : 'Global Purchasing'}
+            💼 {lang === 'es' ? 'Compras Internacionales' : 'Global Procurement'}
           </span>
           <span className="bg-slate-900/80 backdrop-blur-md border border-white/20 text-blue-200 px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-slate-800/90 transition-all cursor-default">
             🗣️ {lang === 'es' ? 'Inglés C1.1' : 'English C1.1'}
