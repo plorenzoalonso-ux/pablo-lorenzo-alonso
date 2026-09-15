@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-slate-100 mb-8 font-normal max-w-3xl mx-auto leading-relaxed drop-shadow">
-          Especialista en Negocios Internacionales y Comercio Exterior. Estudiante de Máster en IFFE Business School.
+          Compras Internacionales | Comercio exterior y Logística | Aprovisionamiento Global
         </p>
         
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
