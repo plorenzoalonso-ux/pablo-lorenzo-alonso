@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   const bgImage = `${import.meta.env.BASE_URL}images/bg-hero.jpg`;
-  const cvFile = `${import.meta.env.BASE_URL}CV-PABLO LORENZO ALONSO.pdf`;
+  const cvFile = `${import.meta.env.BASE_URL}CV PABLO LORENZO ALONSO.pdf`;
 
   return (
     <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-slate-950">
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         <div className="flex justify-center no-print">
           <a 
             href={cvFile} 
-            download="CV-PABLO LORENZO ALONSO.pdf"
+            download="CV PABLO LORENZO ALONSO.pdf"
             className="inline-flex items-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full shadow-2xl transition-all transform hover:scale-105 active:scale-95 text-lg border border-blue-400/30"
           >
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
