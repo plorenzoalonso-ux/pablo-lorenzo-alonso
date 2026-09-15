@@ -1,30 +1,40 @@
 
 import React from 'react';
 
-const Articles: React.FC = () => {
+interface ArticlesProps {
+  lang: 'es' | 'en';
+}
+
+const Articles: React.FC<ArticlesProps> = ({ lang }) => {
   const articles = [
     {
       id: 1,
-      title: "¿Sabías que el Mundial 2026 generará...?",
-      date: "Noviembre 2024",
-      excerpt: "Un análisis detallado sobre las proyecciones económicas y el volumen de negocio que moverá el próximo mundial de fútbol.",
-      category: "Macroeconomía",
+      title: lang === 'es' ? "¿Sabías que el Mundial 2026 generará...?" : "Did you know World Cup 2026 will generate...?",
+      date: lang === 'es' ? "Noviembre 2024" : "November 2024",
+      excerpt: lang === 'es' 
+        ? "Un análisis detallado sobre las proyecciones económicas y el volumen de negocio que moverá el próximo mundial de fútbol."
+        : "A detailed analysis of economic projections and global trade volume expected for the upcoming World Cup.",
+      category: lang === 'es' ? "Macroeconomía" : "Macroeconomics",
       link: "https://www.linkedin.com/posts/pablo-lorenzo-alonso-2362562b2_sab%C3%ADas-que-el-mundial-2026-generar%C3%A1-activity-7402648001544093697-fXe4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsktsoBHzQHByP7h_HyeVHqembyfRP_TeE"
     },
     {
       id: 2,
-      title: "El Ártico: la autopista marítima del futuro",
-      date: "Octubre 2024",
-      excerpt: "Explorando las nuevas rutas comerciales que el deshielo ártico está habilitando y su impacto en la logística mundial.",
-      category: "Logística",
+      title: lang === 'es' ? "El Ártico: la autopista marítima del futuro" : "The Arctic: maritime highway of the future",
+      date: lang === 'es' ? "Octubre 2024" : "October 2024",
+      excerpt: lang === 'es'
+        ? "Explorando las nuevas rutas comerciales que el deshielo ártico está habilitando y su impacto en la logística mundial."
+        : "Exploring new trade routes enabled by Arctic melting and their impact on global shipping logistics.",
+      category: lang === 'es' ? "Logística" : "Logistics",
       link: "https://www.linkedin.com/posts/pablo-lorenzo-alonso-2362562b2_el-%C3%A1rtico-la-autopista-mar%C3%ADtima-del-futuro-activity-7400142638768627712-Sa55?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsktsoBHzQHByP7h_HyeVHqembyfRP_TeE"
     },
     {
       id: 3,
-      title: "Impacto económico del Mundial 2026",
-      date: "Noviembre 2024",
-      excerpt: "Reflexiones sobre cómo los grandes eventos deportivos transforman las economías locales y los flujos comerciales.",
-      category: "Estrategia",
+      title: lang === 'es' ? "Impacto económico del Mundial 2026" : "Economic Impact of the 2026 World Cup",
+      date: lang === 'es' ? "Noviembre 2024" : "November 2024",
+      excerpt: lang === 'es'
+        ? "Reflexiones sobre cómo los grandes eventos deportivos transforman las economías locales y los flujos comerciales."
+        : "Reflections on how mega sporting events transform local economies and international trade flows.",
+      category: lang === 'es' ? "Estrategia" : "Strategy",
       link: "https://www.linkedin.com/posts/pablo-lorenzo-alonso-2362562b2_impacto-econ%C3%B3mico-del-mundial-2026-activity-7402669974831443968-oykY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsktsoBHzQHByP7h_HyeVHqembyfRP_TeE"
     }
   ];
@@ -33,8 +43,14 @@ const Articles: React.FC = () => {
     <div className="max-w-6xl mx-auto px-4">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
-          <h2 className="font-brand text-4xl text-slate-900 mb-4 tracking-tight">Presencia Digital</h2>
-          <p className="text-slate-500 max-w-lg">Compartiendo conocimiento y visión sobre el panorama comercial actual en LinkedIn.</p>
+          <h2 className="font-brand text-4xl text-slate-900 mb-4 tracking-tight">
+            {lang === 'es' ? 'Presencia Digital' : 'Digital Footprint'}
+          </h2>
+          <p className="text-slate-500 max-w-lg">
+            {lang === 'es' 
+              ? 'Compartiendo conocimiento y visión sobre el panorama comercial actual en LinkedIn.'
+              : 'Sharing insights and vision on the global commerce landscape on LinkedIn.'}
+          </p>
         </div>
         <a 
           href="https://linkedin.com/in/pablo-lorenzo-alonso-2362562b2" 
@@ -43,7 +59,7 @@ const Articles: React.FC = () => {
           className="inline-flex items-center px-6 py-3 bg-[#0077b5] text-white rounded-lg font-bold hover:bg-[#005c8d] transition-all no-print"
         >
           <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          Seguir en LinkedIn
+          {lang === 'es' ? 'Seguir en LinkedIn' : 'Follow on LinkedIn'}
         </a>
       </div>
 
@@ -67,7 +83,7 @@ const Articles: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-blue-600 font-bold text-xs flex items-center hover:translate-x-1 transition-transform"
               >
-                LEER MÁS 
+                {lang === 'es' ? 'LEER MÁS' : 'READ MORE'}
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

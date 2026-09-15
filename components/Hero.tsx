@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  lang: 'es' | 'en';
+}
+
+const Hero: React.FC<HeroProps> = ({ lang }) => {
   const bgImage = `${import.meta.env.BASE_URL}images/bg-hero.jpg`;
   const cvFile = `${import.meta.env.BASE_URL}CV PABLO LORENZO ALONSO.pdf`;
 
@@ -29,18 +33,20 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-slate-100 mb-8 font-normal max-w-3xl mx-auto leading-relaxed drop-shadow">
-          Compras Internacionales | Comercio exterior y Logística | Aprovisionamiento Global
+          {lang === 'es' 
+            ? 'Compras Internacionales | Comercio exterior y Logística | Aprovisionamiento Global'
+            : 'International Purchasing | Foreign Trade & Logistics | Global Sourcing'}
         </p>
         
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
           <span className="bg-slate-900/80 backdrop-blur-md border border-white/20 text-blue-200 px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-slate-800/90 transition-all cursor-default">
-            🌍 Comercio Exterior
+            🌍 {lang === 'es' ? 'Comercio Exterior' : 'Foreign Trade'}
           </span>
           <span className="bg-slate-900/80 backdrop-blur-md border border-white/20 text-blue-200 px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-slate-800/90 transition-all cursor-default">
-            💼 Compras Internacionales
+            💼 {lang === 'es' ? 'Compras Internacionales' : 'Global Purchasing'}
           </span>
           <span className="bg-slate-900/80 backdrop-blur-md border border-white/20 text-blue-200 px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-slate-800/90 transition-all cursor-default">
-            🗣️ Inglés C1.1
+            🗣️ {lang === 'es' ? 'Inglés C1.1' : 'English C1.1'}
           </span>
         </div>
 
@@ -53,7 +59,7 @@ const Hero: React.FC = () => {
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
             </svg>
-            DESCARGAR CURRÍCULUM PDF
+            {lang === 'es' ? 'DESCARGAR CURRÍCULUM PDF' : 'DOWNLOAD RESUME PDF'}
           </a>
         </div>
       </div>
